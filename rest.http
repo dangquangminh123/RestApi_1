@@ -1,0 +1,54 @@
+
+GET http://localhost:3000/products 
+
+
+### create a product
+POST http://localhost:3000/products
+content-Type:application/json
+
+{
+    "name": "iPhone 11",
+    "price": 699
+}
+
+### create a product by id
+GET http://localhost:3000/products/id
+
+### get a product by id
+GET http://localhost:3000/products/633853d79eb7977e634ffbf3
+
+### update a product by id
+PATCH http://localhost:3000/products/633853d79eb7977e634ffbf3
+content-Type:application/json
+
+{
+    "price": 1999
+}
+
+### delete a product by id
+DELETE http://localhost:3000/products/6338598c5c95d2971318ae72
+
+### not found
+GET http://localhost:3000/abc_xyz
+
+###
+GET http://localhost:3000/test?name=iMac&price=2399
+
+###
+GET http://localhost:3000/test/8273124421/imac
+
+###
+POST http://localhost:3000/test 
+Content-Type:application/json
+
+{
+    "name": "iMacPro",
+    "price": 4999
+}
+
+###
+POST http://localhost:3000/test 
+Content-Type:application/x-www-form-urlencoded
+
+name=iMac&price=4999
+
